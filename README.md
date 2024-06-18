@@ -67,7 +67,10 @@ An iOS app for setting up soccer & futsal formations.<br>
   
 * [FormationData](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationData.swift) : 다양한 축구 포메이션의 정보를 저장하는 구조체로 포메이션에는 이름, 장점, 단점, 적합한 팀, 예시 팀, 키 플레이어와 같은 세부 정보가 포함되어 있습니다.
   
-* [CustomTableViewCell](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/CustomTableViewCell.swift) : 
+* [CustomTableViewCell](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/CustomTableViewCell.swift) : 포메이션 이름을 표시하는 라벨과 선택 여부를 나타내는 체크박스를 포함하고 있는 커스텀 테이블 뷰 셀입니다.
+   - [checkbox](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/CustomTableViewCell.swift#L11) = 체크박스 역할을 하는 버튼
+   - [formationLabel](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/CustomTableViewCell.swift#L12) = 포메이션 이름을 표시하는 라벨
+   - [뷰 설정](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/CustomTableViewCell.swift#L24) = `setupViews()`
 
   
 
