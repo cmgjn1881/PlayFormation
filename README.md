@@ -51,13 +51,22 @@ An iOS app for setting up soccer & futsal formations.<br>
    - [cellForRowAt](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationInfoViewController.swift#L24) = 각 행에 표시할 셀을 반환
    - [didSelectRowAt](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationInfoViewController.swift#L) = 사용자가 특정 포메이션을 선택했을 때 호출, 선택된 포메이션 객체를 FormationDetailViewController에 전달하고, 해당 뷰 컨트롤러로 네비게이션
      
-* [FormationDetailViewController](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationDetailViewController.swift) :
-   -
-* [Player파일](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/Player.swift) :
-   -
-* [PlayerView](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/PlayerView.swift) :
-   -
-* [FormationData](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationData.swift) :
+* [FormationDetailViewController](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationDetailViewController.swift) : 특정 포메이션의 세부 정보를 보여주는 뷰 컨트롤러 입니다.
+   - [스크롤 뷰 설정](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationDetailViewController.swift#L32) = `setupScrollView()`
+   - [레이블 설정](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationDetailViewController.swift#L52) = `setupLabels()`
+   - [콘텐츠 구성](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationDetailViewController.swift#L60) = `setupContent()`
+    
+* [Player파일](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/Player.swift) : 이 구조체는 축구나 풋살 선수의 정보를 저장합니다.
+  
+* [PlayerView](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/PlayerView.swift) : 축구나 풋살의 선수 정보를 표시하고, 드래그 및 탭 제스처를 통해 사용자가 상호작용할 수 있게하는 커스텀 뷰 클래스 입니다.
+   - [PlayerViewDelegate 프로토콜](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/PlayerView.swift#L3) = 선택된 선수를 처리하기 위한 델리게이트 메서드를 정의합니다.
+   - [뷰 설정](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/PlayerView.swift#L34) = `setupView()`
+   - [제스처 추가](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/PlayerView.swift#L81) = `addPanGesture()`, `addIconTapGesture()`
+   - [제스처 핸들러](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/PlayerView.swift#L93) = `handlePan(gesture: UIPanGestureRecognizer)`드래그 제스처를 처리, `handleIconTap()`아이콘 탭 제스처를 처리
+   - [선수 정보 설정](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/PlayerView.swift#L105) = `configure(playerName: String, playerNumber: String, playerPosition: String)`
+  
+* [FormationData](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationData.swift) : 다양한 축구 포메이션의 정보를 저장하는 구조체로 포메이션에는 이름, 장점, 단점, 적합한 팀, 예시 팀, 키 플레이어와 같은 세부 정보가 포함되어 있습니다.
+  
 * [CustomTableViewCell](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/CustomTableViewCell.swift) : 
 
   
