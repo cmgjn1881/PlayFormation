@@ -2,7 +2,11 @@ import UIKit
 
 class FootballSetupViewController: UIViewController {
     @IBOutlet weak var soccerFieldImageView: UIImageView!
-    @IBOutlet weak var benchImageView: UIImageView!
+    
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var contentView: UIView!
+    
     
     var selectedPlayerView: PlayerView?
     var initialCenter: CGPoint?
@@ -12,13 +16,22 @@ class FootballSetupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         soccerFieldImageView.isUserInteractionEnabled = true // 유저 상호작용 활성화
-        benchImageView.isUserInteractionEnabled = true // 벤치 이미지뷰 유저 상호작용 활성화
+        //benchImageView.isUserInteractionEnabled = true // 벤치 이미지뷰 유저 상호작용 활성화
+        contentView.isUserInteractionEnabled = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setupFormation() // 화면구성이 끝난 후 포메이션 정리
         setupBenchPlayers() // 벤치 플레이어 추가
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        // Content Size 설정
+        let contentWidth = scrollView.bounds.width * 2.2  // Content View의 실제 너비를 Scroll View의 두 배로 설정
+        scrollView.contentSize = CGSize(width: contentWidth, height: scrollView.bounds.height)
     }
     
     private func setupFormation() {
@@ -71,17 +84,19 @@ class FootballSetupViewController: UIViewController {
         
         // 벤치에 플레이어 추가
         let benchPlayerPositions: [(x: CGFloat, y: CGFloat)] = [
-            (x: 0.09, y: 0.5),
-            (x: 0.29, y: 0.5),
-            (x: 0.49, y: 0.5),
-            (x: 0.69, y: 0.5),
-            (x: 0.89, y: 0.5)
-        ]
+                (x: 0.1, y: 0.5),
+                (x: 0.4, y: 0.5),
+                (x: 0.7, y: 0.5),
+                (x: 1.0, y: 0.5),
+                (x: 1.3, y: 0.5),
+                (x: 1.6, y: 0.5),
+                (x: 1.9, y: 0.5)
+            ]
         
         for (index, position) in benchPlayerPositions.enumerated() {
             let playerView = PlayerView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
             playerView.configure(playerName: "Bench \(index + 1)", playerNumber: "\(index + 1)", playerPosition: "SUB")
-            playerView.center = CGPoint(x: benchImageView.bounds.width * position.x, y: benchImageView.bounds.height * position.y)
+            playerView.center = CGPoint(x: contentView.bounds.width * position.x, y: contentView.bounds.height * position.y)
             playerView.isUserInteractionEnabled = true  // 유저 상호작용 활성화
             playerView.delegate = self  // PlayerView에 delegate 설정
             
@@ -93,7 +108,7 @@ class FootballSetupViewController: UIViewController {
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
             playerView.addGestureRecognizer(tapGesture)
             
-            benchImageView.addSubview(playerView)
+            contentView.addSubview(playerView)
             playerViews.append(playerView)
         }
     }
@@ -103,7 +118,7 @@ class FootballSetupViewController: UIViewController {
         guard let playerView = gesture.view as? PlayerView else { return }
         
         // benchImageView의 서브뷰인 경우 드래그 불가
-            if playerView.superview == benchImageView {
+            if playerView.superview == contentView {
                 return
             }
         
@@ -118,14 +133,14 @@ class FootballSetupViewController: UIViewController {
             // 축구장 경계 내에서만 움직이도록 제약 추가
             newCenter.x = max(halfWidth, min(soccerFieldImageView.bounds.width - halfWidth, newCenter.x))
             newCenter.y = max(halfHeight, min(soccerFieldImageView.bounds.height - halfHeight, newCenter.y))
-        } else if playerView.superview == benchImageView {
+        } else if playerView.superview == contentView {
             // 벤치 화면 밖으로 나가지 않도록 제약 추가
             let halfWidth = playerView.bounds.width / 2
             let halfHeight = playerView.bounds.height / 2
             
             // 벤치 경계 내에서만 움직이도록 제약 추가
-            newCenter.x = max(halfWidth, min(benchImageView.bounds.width - halfWidth, newCenter.x))
-            newCenter.y = max(halfHeight, min(benchImageView.bounds.height - halfHeight, newCenter.y))
+            newCenter.x = max(halfWidth, min(contentView.bounds.width - halfWidth, newCenter.x))
+            newCenter.y = max(halfHeight, min(contentView.bounds.height - halfHeight, newCenter.y))
         }
         
         playerView.center = newCenter
@@ -282,7 +297,7 @@ class FootballSetupViewController: UIViewController {
                 if superviewIdentifier == "soccerField" {
                     soccerFieldImageView.addSubview(playerView)
                 } else if superviewIdentifier == "bench" {
-                    benchImageView.addSubview(playerView)
+                    contentView.addSubview(playerView)
                 }
                 playerViews.append(playerView)
             }

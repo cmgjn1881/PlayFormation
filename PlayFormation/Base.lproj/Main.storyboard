@@ -136,16 +136,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j5S-Tg-xGP">
-                                <rect key="frame" x="10" y="676" width="373" height="132"/>
-                                <color key="backgroundColor" systemColor="systemBrownColor"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scf-uF-M77">
-                                <rect key="frame" x="260" y="621" width="117" height="34.333333333333371"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scf-uF-M77">
+                                <rect key="frame" x="260.33333333333331" y="621" width="116.66666666666669" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="포메이션 설명">
                                     <backgroundConfiguration key="background" cornerRadius="8">
@@ -159,6 +151,25 @@
                                     <action selector="Formation_InfButton:" destination="XdT-yF-sIr" eventType="touchUpInside" id="Pbh-3e-LsG"/>
                                 </connections>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReB-Zg-xAz">
+                                <rect key="frame" x="16" y="676" width="361" height="128"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXs-67-61w">
+                                        <rect key="frame" x="8" y="8" width="345" height="112"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <constraints>
+                                    <constraint firstItem="hXs-67-61w" firstAttribute="centerX" secondItem="ReB-Zg-xAz" secondAttribute="centerX" id="D0h-tc-6j1"/>
+                                    <constraint firstAttribute="trailing" secondItem="hXs-67-61w" secondAttribute="trailing" constant="8" id="SU5-hT-mh2"/>
+                                    <constraint firstItem="hXs-67-61w" firstAttribute="centerY" secondItem="ReB-Zg-xAz" secondAttribute="centerY" id="U7C-tR-9NF"/>
+                                    <constraint firstItem="hXs-67-61w" firstAttribute="leading" secondItem="ReB-Zg-xAz" secondAttribute="leading" constant="8" id="pDO-cZ-tgA"/>
+                                    <constraint firstItem="hXs-67-61w" firstAttribute="top" secondItem="ReB-Zg-xAz" secondAttribute="top" constant="8" id="tpF-a9-3gG"/>
+                                    <constraint firstAttribute="bottom" secondItem="hXs-67-61w" secondAttribute="bottom" constant="8" id="tyn-ih-3FM"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="MIS-nC-AMS"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="zhg-31-76V"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jF3-UK-fer"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -168,20 +179,23 @@
                         <constraints>
                             <constraint firstItem="O1a-i4-lcE" firstAttribute="leading" secondItem="jF3-UK-fer" secondAttribute="leading" constant="10" id="17f-vd-Fla"/>
                             <constraint firstItem="jF3-UK-fer" firstAttribute="trailing" secondItem="4cM-Lc-VzI" secondAttribute="trailing" constant="10" id="4j2-pJ-V65"/>
+                            <constraint firstItem="jF3-UK-fer" firstAttribute="bottom" secondItem="ReB-Zg-xAz" secondAttribute="bottom" constant="14" id="5U2-zJ-977"/>
                             <constraint firstItem="4cM-Lc-VzI" firstAttribute="leading" secondItem="jF3-UK-fer" secondAttribute="leading" constant="10" id="5dA-oB-ef5"/>
-                            <constraint firstItem="jF3-UK-fer" firstAttribute="bottom" secondItem="j5S-Tg-xGP" secondAttribute="bottom" constant="10" id="Clj-or-AIr"/>
-                            <constraint firstItem="j5S-Tg-xGP" firstAttribute="leading" secondItem="jF3-UK-fer" secondAttribute="leading" constant="10" id="VVH-mW-4xh"/>
+                            <constraint firstItem="ReB-Zg-xAz" firstAttribute="centerX" secondItem="O1a-i4-lcE" secondAttribute="centerX" id="Im4-Dz-g2K"/>
+                            <constraint firstItem="ReB-Zg-xAz" firstAttribute="trailing" secondItem="scf-uF-M77" secondAttribute="trailing" id="MEW-qK-xGx"/>
+                            <constraint firstItem="ReB-Zg-xAz" firstAttribute="top" secondItem="O1a-i4-lcE" secondAttribute="bottom" constant="8" id="S0v-Zy-eOK"/>
                             <constraint firstItem="O1a-i4-lcE" firstAttribute="top" secondItem="jF3-UK-fer" secondAttribute="top" constant="50" id="WLI-7L-wxm"/>
                             <constraint firstItem="O1a-i4-lcE" firstAttribute="top" secondItem="4cM-Lc-VzI" secondAttribute="bottom" constant="10" id="e0C-RT-2Bf"/>
                             <constraint firstItem="jF3-UK-fer" firstAttribute="trailing" secondItem="O1a-i4-lcE" secondAttribute="trailing" constant="10" id="fCT-Im-jni"/>
                             <constraint firstItem="jF3-UK-fer" firstAttribute="bottom" secondItem="O1a-i4-lcE" secondAttribute="bottom" constant="150" id="iZm-ia-5h5"/>
-                            <constraint firstItem="jF3-UK-fer" firstAttribute="trailing" secondItem="j5S-Tg-xGP" secondAttribute="trailing" constant="10" id="jhb-qG-s9t"/>
+                            <constraint firstItem="ReB-Zg-xAz" firstAttribute="leading" secondItem="jmk-Yq-Shz" secondAttribute="leadingMargin" id="jLG-Ix-9cc"/>
+                            <constraint firstItem="ReB-Zg-xAz" firstAttribute="top" secondItem="scf-uF-M77" secondAttribute="bottom" constant="20.666666666666629" id="v2s-QJ-wSK"/>
                             <constraint firstItem="4cM-Lc-VzI" firstAttribute="top" secondItem="jF3-UK-fer" secondAttribute="top" constant="10" id="wXK-dd-MzC"/>
-                            <constraint firstItem="j5S-Tg-xGP" firstAttribute="top" secondItem="O1a-i4-lcE" secondAttribute="bottom" constant="8" id="x1E-hA-Hhg"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="benchImageView" destination="j5S-Tg-xGP" id="sRX-T0-8MJ"/>
+                        <outlet property="contentView" destination="hXs-67-61w" id="PEt-g1-2Zt"/>
+                        <outlet property="scrollView" destination="ReB-Zg-xAz" id="N2e-Ky-cni"/>
                         <outlet property="soccerFieldImageView" destination="O1a-i4-lcE" id="v3s-ch-Sci"/>
                     </connections>
                 </viewController>
