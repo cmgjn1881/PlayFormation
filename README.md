@@ -28,14 +28,14 @@ An iOS app for setting up football formations.<br>
    - [토스트 메시지 표시](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FootballSetupViewController.swift#L341) = `func showToast(message: String, duration: Double = 3.0)`
    - [PlayerViewDelegate 구현](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FootballSetupViewController.swift#L361) = `func handlePlayerSelection(_ selectedPlayer: PlayerView)`
  
-* FutsalSetupViewController :
-* FormationListViewController :
-* FormationInfoViewController :
-* FormationDetailViewController :
-* Player파일 :
-* PlayerView :
-* FormationData :
-* CustomTableViewCell : 
+* [FutsalSetupViewController](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FutsalSetupViewController.swift) :
+* [FormationListViewController](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationListViewController.swift) :
+* [FormationInfoViewController](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationInfoViewController.swift) :
+* [FormationDetailViewController](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationDetailViewController.swift) :
+* [Player파일](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/Player.swift) :
+* [PlayerView](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/PlayerView.swift) :
+* [FormationData](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationData.swift) :
+* [CustomTableViewCell](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/CustomTableViewCell.swift) : 
 
   
 
