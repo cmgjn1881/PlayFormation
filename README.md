@@ -15,8 +15,8 @@ An iOS app for setting up soccer & futsal formations.<br>
 * ...
 
 ## 주요 코드 설명
-* [SportSelectionViewController](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/SportSelectionViewController.swift) : 앱 실행 시 표시되는 화면의 컨트롤러 코드입니다. soccer 버튼과 futsal 버튼 각각의 화면 전환 코드를 포함하고 있습니다.
-* [FootballSetupViewController](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FootballSetupViewController.swift) : 축구 포메이션을 설정하고 관리하는 화면의 뷰 컨트롤러입니다. 사용자는 축구 필드와 벤치에 선수들을 배치하고, 포메이션을 저장하거나 불러오며, 포메이션을 리셋할 수 있습니다.
+* [SportSelectionViewController](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/SportSelectionViewController.swift) : 앱 실행 시 표시되는 화면의 컨트롤러 코드입니다. soccer 버튼과 futsal 버튼 각각의 화면 전환 코드를 포함하고 있는 뷰 컨트롤러 입니다.
+* [FootballSetupViewController](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FootballSetupViewController.swift) : 축구 포메이션을 설정하고 관리하는 화면의 뷰 컨트롤러입니다. 사용자는 축구 필드와 벤치에 선수들을 배치하고, 포메이션을 저장하거나 불러오며, 포메이션을 리셋할 수 있는 기능을 구현한 컨트롤러 입니다.
    - [필드 포메이션 설정](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FootballSetupViewController.swift#L37) = `setupFormation()`
    - [벤치 플레이어 설정](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FootballSetupViewController.swift#L83) = `setupBenchPlayers()`
    - [제스처 처리](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FootballSetupViewController.swift#L117) = `handlePan`
@@ -28,7 +28,7 @@ An iOS app for setting up soccer & futsal formations.<br>
    - [토스트 메시지 표시](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FootballSetupViewController.swift#L341) = `func showToast(message: String, duration: Double = 3.0)`
    - [PlayerViewDelegate 구현](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FootballSetupViewController.swift#L361) = `func handlePlayerSelection(_ selectedPlayer: PlayerView)`
  
-* [FutsalSetupViewController](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FutsalSetupViewController.swift) : 풋살 포메이션을 설정하고 관리하는 화면의 뷰 컨트롤러입니다. 사용자는 풋살 필드와 벤치에 선수들을 배치하고, 포메이션을 저장하거나 불러오며, 포메이션을 리셋할 수 있습니다.
+* [FutsalSetupViewController](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FutsalSetupViewController.swift) : 풋살 포메이션을 설정하고 관리하는 화면의 뷰 컨트롤러입니다. 사용자는 풋살 필드와 벤치에 선수들을 배치하고, 포메이션을 저장하거나 불러오며, 포메이션을 리셋할 수 있는 기능을 구현한 뷰 컨트롤러 입니다.
    - [필드 포메이션 설정](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FutsalSetupViewController.swift#L33) = `setupFormation()`
    - [벤치 플레이어 설정](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FutsalSetupViewController.swift#L90) = `setupBenchPlayers()`
    - [제스처 처리](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FutsalSetupViewController.swift#L121) = `handlePan`
@@ -38,7 +38,7 @@ An iOS app for setting up soccer & futsal formations.<br>
    - [포메이션 리셋 및 변경](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FutsalSetupViewController.swift#L311) = `@IBAction func ResetButton(_ sender: Any)`, `@IBAction func set4PButton(_ sender: Any)`, `@IBAction func set5PButton(_ sender: Any)`, `@IBAction func set6PButton(_ sender: Any)`
    - [PlayerViewDelegate 구현](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FutsalSetupViewController.swift#L373) = `handlePlayerSelection(_ selectedPlayer: PlayerView)`
      
-* [FormationListViewController](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationListViewController.swift) : 테이블 뷰를 사용하여 저장된 포메이션 목록을 표시하고, 선택하거나 삭제할 수 있는 기능을 구현합니다.
+* [FormationListViewController](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationListViewController.swift) : 테이블 뷰를 사용하여 저장된 포메이션 목록을 표시하고, 선택하거나 삭제할 수 있는 기능을 구현한 뷰 컨트롤러 입니다.
    - [테이블 뷰 설정](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationListViewController.swift#L17) = `setupTableView()`
    - [네비게이션 바 설정](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationListViewController.swift#L25) = `setupNavigationBar()`
    - [테이블 뷰 데이터 소스 및 델리게이트 메서드](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationListViewController.swift#L29) = `tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int`, `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell`
@@ -46,8 +46,11 @@ An iOS app for setting up soccer & futsal formations.<br>
    - [포메이션 선택](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationListViewController.swift#L57) = `tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)`
    - [선택된 포메이션 삭제](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationListViewController.swift#L63) = `deleteSelectedFormations()`
      
-* [FormationInfoViewController](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationInfoViewController.swift) :
-   -
+* [FormationInfoViewController](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationInfoViewController.swift) : 저장된 포메이션 목록을 테이블 뷰로 표시하고 선택된 포메이션의 세부 정보를 다른 뷰 컨트롤러에서 보여주는 기능을 구현한 뷰 컨트롤러 입니다.
+   - [numberOfRowsInSection](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationInfoViewController.swift#L20) = `섹션 내 행의 수를 반환`
+   - [cellForRowAt](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationInfoViewController.swift#L24) = `각 행에 표시할 셀을 반환`
+   - [didSelectRowAt](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationInfoViewController.swift#L) = `사용자가 특정 포메이션을 선택했을 때 호출`, `선택된 포메이션 객체를 FormationDetailViewController에 전달하고, 해당 뷰 컨트롤러로 네비게이션`
+     
 * [FormationDetailViewController](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationDetailViewController.swift) :
    -
 * [Player파일](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/Player.swift) :
