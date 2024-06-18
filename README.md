@@ -145,4 +145,4 @@ An iOS app for setting up soccer & futsal formations.<br>
    - 축구 연습: 연습 시 다양한 포메이션을 시도해 보고, 각 포메이션의 장단점을 파악할 수 있습니다.
 
 ## 유튜브 영상
-* ..
+* [시연 동영상 링크](https://youtu.be/5Ax6GnZVTso?si=ItAFuev71UWCYdXR)
