@@ -37,8 +37,15 @@ An iOS app for setting up soccer & futsal formations.<br>
    - [포메이션 불러오기](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FutsalSetupViewController.swift#L228) = `@IBAction func LoadButton(_ sender: Any)`, `loadSavedFormations()`, `loadFormation(title: String)`
    - [포메이션 리셋 및 변경](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FutsalSetupViewController.swift#L311) = `@IBAction func ResetButton(_ sender: Any)`, `@IBAction func set4PButton(_ sender: Any)`, `@IBAction func set5PButton(_ sender: Any)`, `@IBAction func set6PButton(_ sender: Any)`
    - [PlayerViewDelegate 구현](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FutsalSetupViewController.swift#L373) = `handlePlayerSelection(_ selectedPlayer: PlayerView)`
-* [FormationListViewController](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationListViewController.swift) :
-   -
+     
+* [FormationListViewController](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationListViewController.swift) : 테이블 뷰를 사용하여 저장된 포메이션 목록을 표시하고, 선택하거나 삭제할 수 있는 기능을 구현합니다.
+   - [테이블 뷰 설정](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationListViewController.swift#L17) = `setupTableView()`
+   - [네비게이션 바 설정](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationListViewController.swift#L25) = `setupNavigationBar()`
+   - [테이블 뷰 데이터 소스 및 델리게이트 메서드](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationListViewController.swift#L29) = `tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int`, `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell`
+   - [체크박스 선택/해제](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationListViewController.swift#L46) = `checkboxTapped(_ sender: UIButton)`
+   - [포메이션 선택](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationListViewController.swift#L57) = `tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)`
+   - [선택된 포메이션 삭제](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationListViewController.swift#L63) = `deleteSelectedFormations()`
+     
 * [FormationInfoViewController](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationInfoViewController.swift) :
    -
 * [FormationDetailViewController](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationDetailViewController.swift) :
