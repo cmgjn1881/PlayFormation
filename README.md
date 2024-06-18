@@ -9,6 +9,7 @@ An iOS app for setting up soccer & futsal formations.<br>
 ## 목차
  - [작품 개요](#작품-개요)
  - [주요 기능](#주요-기능)
+ - [시연 사진](#시연-사진)
  - [주요 코드 설명](#주요-코드-설명)
  - [기대 효과](#기대-효과)
  - [유튜브 영상](#유튜브-영상)
@@ -30,6 +31,54 @@ An iOS app for setting up soccer & futsal formations.<br>
 * 포메이션 정보 제공:
    - 각 포메이션의 장점, 단점, 적합한 팀, 예시 팀, 키 플레이어 정보를 제공합니다.
    - 이를 통해 사용자는 다양한 전술적 선택을 할 수 있습니다.
+
+## 시연 사진
+
+
+<table>
+  <tr>
+    <td style="text-align: center;">
+      <img src="https://github.com/cmgjn1881/PlayFormation/blob/main/images/main_screen.png?raw=true" alt="시연 사진 1" width="300" height="600"/>
+      <p style="text-align: center;">main 화면</p>
+    </td>
+    <td style="text-align: center;">
+      <img src="https://github.com/cmgjn1881/PlayFormation/blob/main/images/soccer_screen.png?raw=true" alt="시연 사진 2" width="300" height="600"/>
+      <p style="text-align: center;">soccer 화면</p>
+    </td>
+    <td style="text-align: center;">
+      <img src="https://github.com/cmgjn1881/PlayFormation/blob/main/images/futsal_screen.png?raw=true" alt="시연 사진 3" width="300" height="600"/>
+      <p style="text-align: center;">futsal 화면</p>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td style="text-align: center;">
+      <img src="https://github.com/cmgjn1881/PlayFormation/blob/main/images/formationList_screen.png?raw=true" alt="시연 사진 4" width="300" height="600"/>
+      <p style="text-align: center;">save formaion List 화면</p>
+    </td>
+    <td style="text-align: center;">
+      <img src="https://github.com/cmgjn1881/PlayFormation/blob/main/images/formationInfList_screen.png?raw=true" alt="시연 사진 5" width="300" height="600"/>
+      <p style="text-align: center;">formation Inf List 화면</p>
+    </td>
+    <td style="text-align: center;">
+      <img src="https://github.com/cmgjn1881/PlayFormation/blob/main/images/formationInf_screen.png?raw=true" alt="시연 사진 6" width="300" height="600"/>
+      <p style="text-align: center;">formation Inf detail 화면</p>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td style="text-align: center;">
+      <img src="https://github.com/cmgjn1881/PlayFormation/blob/main/images/correction_screen.png?raw=true" alt="시연 사진 7" width="300" height="600"/>
+      <p style="text-align: center;">correction 화면</p>
+    </td>
+  </tr>
+</table>
+
+
 
 ## 주요 코드 설명
 * [SportSelectionViewController](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/SportSelectionViewController.swift) : 앱 실행 시 표시되는 화면의 컨트롤러 코드입니다. soccer 버튼과 futsal 버튼 각각의 화면 전환 코드를 포함하고 있는 뷰 컨트롤러 입니다.
