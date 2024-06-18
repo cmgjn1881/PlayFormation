@@ -9,6 +9,7 @@ An iOS app for setting up soccer & futsal formations.<br>
 ## 목차
  - [작품 개요](#작품-개요)
  - [주요 코드 설명](#주요-코드-설명)
+ - [유튜브 영상](#유튜브-영상)
 
 ## 작품 개요
 * ...
@@ -72,5 +73,5 @@ An iOS app for setting up soccer & futsal formations.<br>
    - [formationLabel](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/CustomTableViewCell.swift#L12) = 포메이션 이름을 표시하는 라벨
    - [뷰 설정](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/CustomTableViewCell.swift#L24) = `setupViews()`
 
-  
-
+## 유튜브 영상
+* ..
