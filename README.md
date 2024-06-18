@@ -8,12 +8,28 @@ An iOS app for setting up soccer & futsal formations.<br>
 
 ## 목차
  - [작품 개요](#작품-개요)
+ - [주요 기능](#주요-기능)
  - [주요 코드 설명](#주요-코드-설명)
+ - [기대 효과](#기대-효과)
  - [유튜브 영상](#유튜브-영상)
 
 ## 작품 개요
-* ...
-* ...
+* PlayFormation은 조기 축구나 친구들과의 축구 경기에 간편하게 사용할 수 있는 편리한 앱입니다. 이 프로젝트는 축구 포메이션을 쉽게 설정하고 관리할 수 있도록 하기 위해 기획되었습니다.
+* 프로젝트 배경 및 목표 : 많은 아마추어 축구 팀과 친구들끼리의 경기에서, 경기 전에 포메이션을 설정하고 각 선수의 역할을 명확히 하는 것이 중요한 요소 중 하나입니다. 하지만 이를 수기로 하거나 복잡한 도구를 사용하는 것은 번거롭고 시간이 많이 소요됩니다. PlayFormation은 이러한 문제를 해결하고자 만들어졌습니다.
+
+## 주요 기능
+* 포메이션 선택 및 설정 :
+   - 여러 축구,풋살 포메이션 중에서 원하는 포메이션을 선택할 수 있습니다.
+   - 각 포메이션에 대해 선수의 위치를 드래그 앤 드롭 방식으로 쉽게 설정할 수 있습니다.
+* 플레이어 정보 관리:
+   - 선수의 이름, 등번호, 포지션을 입력하여 저장할 수 있습니다.
+   - 터치 제스처를 통해 선수 정보를 수정하거나, 다른 위치로 이동시킬 수 있습니다.
+* 포메이션 저장 및 불러오기:
+   - 설정한 포메이션을 저장하여, 나중에 불러올 수 있습니다.
+   - 저장된 포메이션 목록을 쉽게 관리할 수 있습니다.
+* 포메이션 정보 제공:
+   - 각 포메이션의 장점, 단점, 적합한 팀, 예시 팀, 키 플레이어 정보를 제공합니다.
+   - 이를 통해 사용자는 다양한 전술적 선택을 할 수 있습니다.
 
 ## 주요 코드 설명
 * [SportSelectionViewController](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/SportSelectionViewController.swift) : 앱 실행 시 표시되는 화면의 컨트롤러 코드입니다. soccer 버튼과 futsal 버튼 각각의 화면 전환 코드를 포함하고 있는 뷰 컨트롤러 입니다.
@@ -72,6 +88,12 @@ An iOS app for setting up soccer & futsal formations.<br>
    - [checkbox](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/CustomTableViewCell.swift#L11) = 체크박스 역할을 하는 버튼
    - [formationLabel](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/CustomTableViewCell.swift#L12) = 포메이션 이름을 표시하는 라벨
    - [뷰 설정](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/CustomTableViewCell.swift#L24) = `setupViews()`
+
+## 기대 효과
+* PlayFormation을 통해 사용자는 더 체계적이고 전략적인 축구 경기를 준비할 수 있습니다. 또한, 포메이션 설정과 선수 관리에 소요되는 시간을 절약하고, 더 나은 팀워크와 경기 운영을 경험할 수 있을 것입니다.
+   - 조기 축구팀: 매주 경기 전에 팀원들의 위치를 빠르게 설정하고, 각자의 역할을 명확히 할 수 있습니다.
+   - 친구들과의 경기: 친구들과의 캐주얼한 경기에서도 전략적 포메이션을 손쉽게 설정하여 더 체계적인 경기를 즐길 수 있습니다.
+   - 축구 연습: 연습 시 다양한 포메이션을 시도해 보고, 각 포메이션의 장단점을 파악할 수 있습니다.
 
 ## 유튜브 영상
 * ..
