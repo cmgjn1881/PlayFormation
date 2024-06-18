@@ -47,9 +47,9 @@ An iOS app for setting up soccer & futsal formations.<br>
    - [선택된 포메이션 삭제](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationListViewController.swift#L63) = `deleteSelectedFormations()`
      
 * [FormationInfoViewController](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationInfoViewController.swift) : 저장된 포메이션 목록을 테이블 뷰로 표시하고 선택된 포메이션의 세부 정보를 다른 뷰 컨트롤러에서 보여주는 기능을 구현한 뷰 컨트롤러 입니다.
-   - [numberOfRowsInSection](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationInfoViewController.swift#L20) = `섹션 내 행의 수를 반환`
-   - [cellForRowAt](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationInfoViewController.swift#L24) = `각 행에 표시할 셀을 반환`
-   - [didSelectRowAt](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationInfoViewController.swift#L) = `사용자가 특정 포메이션을 선택했을 때 호출`, `선택된 포메이션 객체를 FormationDetailViewController에 전달하고, 해당 뷰 컨트롤러로 네비게이션`
+   - [numberOfRowsInSection](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationInfoViewController.swift#L20) = 섹션 내 행의 수를 반환
+   - [cellForRowAt](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationInfoViewController.swift#L24) = 각 행에 표시할 셀을 반환
+   - [didSelectRowAt](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationInfoViewController.swift#L) = 사용자가 특정 포메이션을 선택했을 때 호출, 선택된 포메이션 객체를 FormationDetailViewController에 전달하고, 해당 뷰 컨트롤러로 네비게이션
      
 * [FormationDetailViewController](https://github.com/cmgjn1881/PlayFormation/blob/main/PlayFormation/FormationDetailViewController.swift) :
    -
